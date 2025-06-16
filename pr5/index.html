@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Creator</title>
+    <script src="main.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        .quiz-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .questions-list {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .question-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: white;
+            border-left: 4px solid #4CAF50;
+            border-radius: 4px;
+        }
+        
+        .correct-answer {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .wrong-answer {
+            color: #f44336;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz Creator</h1>
+    
+    <div class="quiz-container">
+        <h2>All questions:</h2>
+        <div id="questions-list" class="questions-list">
+        </div>
+        
+        <hr>
+        
+        <h2>Add new question:</h2>
+        <form id="question-form">
+            <div class="form-group">
+                <label for="question-text">Question:</label>
+                <input type="text" id="question-text" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="correct-answer">Correct answer:</label>
+                <input type="text" id="correct-answer" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="wrong-answer">Wrong answer:</label>
+                <input type="text" id="wrong-answer" required>
+            </div>
+            
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>
